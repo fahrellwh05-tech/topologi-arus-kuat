@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Topologi Arus Kuat</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-icon">⚡</div>
+
+        <div>
+            <div class="eyebrow">ELECTRICAL POWER SYSTEM</div>
+            <h1>TOPOLOGI INSTALASI ARUS KUAT</h1>
+            <p>Monitoring Panel Distribusi Gedung</p>
+        </div>
+    </header>
+
+
+    <!-- SUMBER LISTRIK -->
+    <main>
+
+        <section class="source-section">
+
+            <div class="source-box">
+                <div class="source-icon">⚡</div>
+
+                <div>
+                    <span class="small-label">SUMBER LISTRIK</span>
+                    <h2>PLN / SUMBER UTAMA</h2>
+                </div>
+            </div>
+
+            <div class="main-line"></div>
+
+        </section>
+
+
+        <!-- TOPOLOGI GEDUNG -->
+        <section class="topology">
+
+            <!-- GEDUNG A -->
+            <div class="building-column">
+
+                <div class="vertical-line top-line"></div>
+
+                <div class="building-card">
+                    <div class="building-icon">🏢</div>
+
+                    <div>
+                        <span class="building-label">GEDUNG</span>
+                        <h3>GEDUNG A</h3>
+                    </div>
+                </div>
+
+                <div class="vertical-line"></div>
+
+                <button class="panel-card" onclick="showPanel('A')">
+                    <span class="panel-icon">⚙</span>
+                    <span class="panel-title">PANEL A</span>
+                    <span class="click-text">KLIK UNTUK DETAIL</span>
+                </button>
+
+            </div>
+
+
+            <!-- GEDUNG B -->
+            <div class="building-column">
+
+                <div class="vertical-line top-line"></div>
+
+                <div class="building-card">
+                    <div class="building-icon">🏢</div>
+
+                    <div>
+                        <span class="building-label">GEDUNG</span>
+                        <h3>GEDUNG B</h3>
+                    </div>
+                </div>
+
+                <div class="vertical-line"></div>
+
+                <button class="panel-card" onclick="showPanel('B')">
+                    <span class="panel-icon">⚙</span>
+                    <span class="panel-title">PANEL B</span>
+                    <span class="click-text">KLIK UNTUK DETAIL</span>
+                </button>
+
+            </div>
+
+
+            <!-- GEDUNG C -->
+            <div class="building-column">
+
+                <div class="vertical-line top-line"></div>
+
+                <div class="building-card">
+                    <div class="building-icon">🏢</div>
+
+                    <div>
+                        <span class="building-label">GEDUNG</span>
+                        <h3>GEDUNG C</h3>
+                    </div>
+                </div>
+
+                <div class="vertical-line"></div>
+
+                <button class="panel-card" onclick="showPanel('C')">
+                    <span class="panel-icon">⚙</span>
+                    <span class="panel-title">PANEL C</span>
+                    <span class="click-text">KLIK UNTUK DETAIL</span>
+                </button>
+
+            </div>
+
+
+            <!-- GEDUNG D -->
+            <div class="building-column">
+
+                <div class="vertical-line top-line"></div>
+
+                <div class="building-card">
+                    <div class="building-icon">🏢</div>
+
+                    <div>
+                        <span class="building-label">GEDUNG</span>
+                        <h3>GEDUNG D</h3>
+                    </div>
+                </div>
+
+                <div class="vertical-line"></div>
+
+                <button class="panel-card" onclick="showPanel('D')">
+                    <span class="panel-icon">⚙</span>
+                    <span class="panel-title">PANEL D</span>
+                    <span class="click-text">KLIK UNTUK DETAIL</span>
+                </button>
+
+            </div>
+
+
+            <!-- GEDUNG E -->
+            <div class="building-column">
+
+                <div class="vertical-line top-line"></div>
+
+                <div class="building-card">
+                    <div class="building-icon">🏢</div>
+
+                    <div>
+                        <span class="building-label">GEDUNG</span>
+                        <h3>GEDUNG E</h3>
+                    </div>
+                </div>
+
+                <div class="vertical-line"></div>
+
+                <button class="panel-card" onclick="showPanel('E')">
+                    <span class="panel-icon">⚙</span>
+                    <span class="panel-title">PANEL E</span>
+                    <span class="click-text">KLIK UNTUK DETAIL</span>
+                </button>
+
+            </div>
+
+
+            <!-- GEDUNG F -->
+            <div class="building-column">
+
+                <div class="vertical-line top-line"></div>
+
+                <div class="building-card">
+                    <div class="building-icon">🏢</div>
+
+                    <div>
+                        <span class="building-label">GEDUNG</span>
+                        <h3>GEDUNG F</h3>
+                    </div>
+                </div>
+
+                <div class="vertical-line"></div>
+
+                <button class="panel-card" onclick="showPanel('F')">
+                    <span class="panel-icon">⚙</span>
+                    <span class="panel-title">PANEL F</span>
+                    <span class="click-text">KLIK UNTUK DETAIL</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- KETERANGAN -->
+        <section class="legend">
+
+            <div class="legend-item">
+                <span class="legend-dot source-dot"></span>
+                SUMBER LISTRIK
+            </div>
+
+            <div class="legend-item">
+                <span class="legend-dot building-dot"></span>
+                GEDUNG
+            </div>
+
+            <div class="legend-item">
+                <span class="legend-dot panel-dot"></span>
+                PANEL DAPAT DIKLIK
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER SUMMARY -->
+        <section class="summary">
+
+            <div class="summary-card">
+                <span>JUMLAH GEDUNG</span>
+                <strong>6</strong>
+            </div>
+
+            <div class="summary-card">
+                <span>JUMLAH PANEL</span>
+                <strong>6</strong>
+            </div>
+
+            <div class="summary-card">
+                <span>TOTAL MCB</span>
+                <strong id="totalMCB">35</strong>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- POPUP PANEL -->
+    <div id="panelModal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close-button" onclick="closePanel()">×</button>
+
+            <div class="modal-header">
+                <div class="modal-icon">⚙</div>
+
+                <div>
+                    <span class="small-label">DETAIL</span>
+                    <h2 id="modalPanelName">PANEL A</h2>
+                </div>
+            </div>
+
+
+            <div class="mcb-summary">
+                <span>JUMLAH MCB</span>
+                <strong id="mcbCount">0</strong>
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>MCB</th>
+                            <th>AMPERE</th>
+                            <th>PHASE</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="mcbTableBody">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
