@@ -3,290 +3,378 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Topologi Arus Kuat</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Topologi Instalasi Arus Kuat</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
     <header class="header">
-        <div class="header-icon">⚡</div>
+
+        <div class="header-logo">
+            ⚡
+        </div>
 
         <div>
-            <div class="eyebrow">ELECTRICAL POWER SYSTEM</div>
-            <h1>TOPOLOGI INSTALASI ARUS KUAT</h1>
-            <p>Monitoring Panel Distribusi Gedung</p>
+            <div class="header-small">
+                ELECTRICAL POWER SYSTEM
+            </div>
+
+            <h1>
+                TOPOLOGI INSTALASI ARUS KUAT
+            </h1>
+
+            <p>
+                Sistem Distribusi Listrik Gedung
+            </p>
         </div>
+
     </header>
 
 
-    <!-- SUMBER LISTRIK -->
-    <main>
+    <!-- =====================================================
+         BREADCRUMB / NAVIGASI
+    ====================================================== -->
 
-        <section class="source-section">
+    <div class="navigation">
 
-            <div class="source-box">
-                <div class="source-icon">⚡</div>
+        <button
+            id="backButton"
+            class="back-button"
+            onclick="goBack()">
 
-                <div>
-                    <span class="small-label">SUMBER LISTRIK</span>
-                    <h2>PLN / SUMBER UTAMA</h2>
-                </div>
-            </div>
+            ← KEMBALI
 
-            <div class="main-line"></div>
+        </button>
 
-        </section>
+        <div class="breadcrumb">
 
+            <span id="breadcrumbSource">
+                SUMBER PLN
+            </span>
 
-        <!-- TOPOLOGI GEDUNG -->
-        <section class="topology">
+            <span class="arrow">
+                →
+            </span>
 
-            <!-- GEDUNG A -->
-            <div class="building-column">
+            <span id="breadcrumbBuilding">
+                -
+            </span>
 
-                <div class="vertical-line top-line"></div>
+            <span class="arrow">
+                →
+            </span>
 
-                <div class="building-card">
-                    <div class="building-icon">🏢</div>
-
-                    <div>
-                        <span class="building-label">GEDUNG</span>
-                        <h3>GEDUNG A</h3>
-                    </div>
-                </div>
-
-                <div class="vertical-line"></div>
-
-                <button class="panel-card" onclick="showPanel('A')">
-                    <span class="panel-icon">⚙</span>
-                    <span class="panel-title">PANEL A</span>
-                    <span class="click-text">KLIK UNTUK DETAIL</span>
-                </button>
-
-            </div>
-
-
-            <!-- GEDUNG B -->
-            <div class="building-column">
-
-                <div class="vertical-line top-line"></div>
-
-                <div class="building-card">
-                    <div class="building-icon">🏢</div>
-
-                    <div>
-                        <span class="building-label">GEDUNG</span>
-                        <h3>GEDUNG B</h3>
-                    </div>
-                </div>
-
-                <div class="vertical-line"></div>
-
-                <button class="panel-card" onclick="showPanel('B')">
-                    <span class="panel-icon">⚙</span>
-                    <span class="panel-title">PANEL B</span>
-                    <span class="click-text">KLIK UNTUK DETAIL</span>
-                </button>
-
-            </div>
-
-
-            <!-- GEDUNG C -->
-            <div class="building-column">
-
-                <div class="vertical-line top-line"></div>
-
-                <div class="building-card">
-                    <div class="building-icon">🏢</div>
-
-                    <div>
-                        <span class="building-label">GEDUNG</span>
-                        <h3>GEDUNG C</h3>
-                    </div>
-                </div>
-
-                <div class="vertical-line"></div>
-
-                <button class="panel-card" onclick="showPanel('C')">
-                    <span class="panel-icon">⚙</span>
-                    <span class="panel-title">PANEL C</span>
-                    <span class="click-text">KLIK UNTUK DETAIL</span>
-                </button>
-
-            </div>
-
-
-            <!-- GEDUNG D -->
-            <div class="building-column">
-
-                <div class="vertical-line top-line"></div>
-
-                <div class="building-card">
-                    <div class="building-icon">🏢</div>
-
-                    <div>
-                        <span class="building-label">GEDUNG</span>
-                        <h3>GEDUNG D</h3>
-                    </div>
-                </div>
-
-                <div class="vertical-line"></div>
-
-                <button class="panel-card" onclick="showPanel('D')">
-                    <span class="panel-icon">⚙</span>
-                    <span class="panel-title">PANEL D</span>
-                    <span class="click-text">KLIK UNTUK DETAIL</span>
-                </button>
-
-            </div>
-
-
-            <!-- GEDUNG E -->
-            <div class="building-column">
-
-                <div class="vertical-line top-line"></div>
-
-                <div class="building-card">
-                    <div class="building-icon">🏢</div>
-
-                    <div>
-                        <span class="building-label">GEDUNG</span>
-                        <h3>GEDUNG E</h3>
-                    </div>
-                </div>
-
-                <div class="vertical-line"></div>
-
-                <button class="panel-card" onclick="showPanel('E')">
-                    <span class="panel-icon">⚙</span>
-                    <span class="panel-title">PANEL E</span>
-                    <span class="click-text">KLIK UNTUK DETAIL</span>
-                </button>
-
-            </div>
-
-
-            <!-- GEDUNG F -->
-            <div class="building-column">
-
-                <div class="vertical-line top-line"></div>
-
-                <div class="building-card">
-                    <div class="building-icon">🏢</div>
-
-                    <div>
-                        <span class="building-label">GEDUNG</span>
-                        <h3>GEDUNG F</h3>
-                    </div>
-                </div>
-
-                <div class="vertical-line"></div>
-
-                <button class="panel-card" onclick="showPanel('F')">
-                    <span class="panel-icon">⚙</span>
-                    <span class="panel-title">PANEL F</span>
-                    <span class="click-text">KLIK UNTUK DETAIL</span>
-                </button>
-
-            </div>
-
-        </section>
-
-
-        <!-- KETERANGAN -->
-        <section class="legend">
-
-            <div class="legend-item">
-                <span class="legend-dot source-dot"></span>
-                SUMBER LISTRIK
-            </div>
-
-            <div class="legend-item">
-                <span class="legend-dot building-dot"></span>
-                GEDUNG
-            </div>
-
-            <div class="legend-item">
-                <span class="legend-dot panel-dot"></span>
-                PANEL DAPAT DIKLIK
-            </div>
-
-        </section>
-
-
-        <!-- FOOTER SUMMARY -->
-        <section class="summary">
-
-            <div class="summary-card">
-                <span>JUMLAH GEDUNG</span>
-                <strong>6</strong>
-            </div>
-
-            <div class="summary-card">
-                <span>JUMLAH PANEL</span>
-                <strong>6</strong>
-            </div>
-
-            <div class="summary-card">
-                <span>TOTAL MCB</span>
-                <strong id="totalMCB">35</strong>
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- POPUP PANEL -->
-    <div id="panelModal" class="modal">
-
-        <div class="modal-content">
-
-            <button class="close-button" onclick="closePanel()">×</button>
-
-            <div class="modal-header">
-                <div class="modal-icon">⚙</div>
-
-                <div>
-                    <span class="small-label">DETAIL</span>
-                    <h2 id="modalPanelName">PANEL A</h2>
-                </div>
-            </div>
-
-
-            <div class="mcb-summary">
-                <span>JUMLAH MCB</span>
-                <strong id="mcbCount">0</strong>
-            </div>
-
-
-            <div class="table-container">
-
-                <table>
-
-                    <thead>
-                        <tr>
-                            <th>MCB</th>
-                            <th>AMPERE</th>
-                            <th>PHASE</th>
-                        </tr>
-                    </thead>
-
-                    <tbody id="mcbTableBody">
-                    </tbody>
-
-                </table>
-
-            </div>
+            <span id="breadcrumbPanel">
+                -
+            </span>
 
         </div>
 
     </div>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             LEVEL 1
+             SUMBER PLN
+        ================================================== -->
+
+        <section
+            id="sourceView"
+            class="view active">
+
+            <div class="source-area">
+
+                <div class="source-line-top"></div>
+
+                <button
+                    class="source-card"
+                    onclick="openBuildings()">
+
+                    <div class="source-icon">
+                        ⚡
+                    </div>
+
+                    <div class="source-text">
+
+                        <span>
+                            SUMBER LISTRIK
+                        </span>
+
+                        <h2>
+                            PLN
+                        </h2>
+
+                        <small>
+                            KLIK UNTUK MELIHAT GEDUNG
+                        </small>
+
+                    </div>
+
+                    <div class="source-arrow">
+                        →
+                    </div>
+
+                </button>
+
+                <div class="source-line-bottom"></div>
+
+                <div class="source-hint">
+
+                    <span class="pulse"></span>
+
+                    Klik sumber listrik untuk melihat distribusi gedung
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             LEVEL 2
+             GEDUNG
+        ================================================== -->
+
+        <section
+            id="buildingView"
+            class="view">
+
+            <div class="section-title">
+
+                <span class="section-label">
+                    DISTRIBUSI LISTRIK
+                </span>
+
+                <h2>
+                    PILIH GEDUNG
+                </h2>
+
+                <p>
+                    Pilih gedung untuk melihat panel distribusinya
+                </p>
+
+            </div>
+
+
+            <div
+                id="buildingGrid"
+                class="building-grid">
+
+                <!-- Gedung dibuat oleh JavaScript -->
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             LEVEL 3
+             PANEL
+        ================================================== -->
+
+        <section
+            id="panelView"
+            class="view">
+
+            <div class="section-title">
+
+                <span class="section-label">
+                    DISTRIBUSI PANEL
+                </span>
+
+                <h2 id="selectedBuildingTitle">
+                    GEDUNG
+                </h2>
+
+                <p>
+                    Pilih panel untuk melihat data MCB
+                </p>
+
+            </div>
+
+
+            <div
+                id="panelGrid"
+                class="panel-grid">
+
+                <!-- Panel dibuat oleh JavaScript -->
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             LEVEL 4
+             DETAIL MCB
+        ================================================== -->
+
+        <section
+            id="detailView"
+            class="view">
+
+            <div class="section-title">
+
+                <span class="section-label">
+                    DATA PANEL
+                </span>
+
+                <h2 id="selectedPanelTitle">
+                    PANEL
+                </h2>
+
+                <p>
+                    Informasi MCB pada panel
+                </p>
+
+            </div>
+
+
+            <div class="detail-layout">
+
+
+                <!-- INFO PANEL -->
+
+                <div class="panel-info-card">
+
+                    <div class="big-panel-icon">
+                        ⚙
+                    </div>
+
+                    <div>
+
+                        <span>
+                            PANEL
+                        </span>
+
+                        <h2 id="detailPanelName">
+                            PANEL
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <!-- JUMLAH MCB -->
+
+                <div class="mcb-count-card">
+
+                    <span>
+                        JUMLAH MCB
+                    </span>
+
+                    <strong id="mcbCount">
+                        0
+                    </strong>
+
+                    <small>
+                        Circuit Breaker
+                    </small>
+
+                </div>
+
+
+                <!-- TABEL MCB -->
+
+                <div class="mcb-table-card">
+
+                    <div class="table-header">
+
+                        <div>
+                            <span>
+                                DATA MCB
+                            </span>
+
+                            <h3>
+                                Konfigurasi Panel
+                            </h3>
+                        </div>
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        NO
+                                    </th>
+
+                                    <th>
+                                        MCB
+                                    </th>
+
+                                    <th>
+                                        AMPERE
+                                    </th>
+
+                                    <th>
+                                        PHASE
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="mcbTableBody">
+
+                                <!-- Data MCB dibuat JavaScript -->
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div>
+            ⚡ ELECTRICAL POWER SYSTEM
+        </div>
+
+        <div>
+            TOPOLOGI ARUS KUAT
+        </div>
+
+    </footer>
 
 
     <script src="script.js"></script>
