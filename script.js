@@ -1,278 +1,131 @@
 /* =====================================================
-   DATA TOPOLOGI
-
-   Format:
-
-   GEDUNG
-      |
-      └── PANEL
-            |
-            └── MCB
-
+   DATA
 ===================================================== */
 
 const topology = {
 
     A: {
         name: "GEDUNG A",
-
         panels: {
 
             A1: [
-                {
-                    ampere: "10 A",
-                    phase: "1 Phase"
-                },
-                {
-                    ampere: "16 A",
-                    phase: "1 Phase"
-                },
-                {
-                    ampere: "20 A",
-                    phase: "1 Phase"
-                },
-                {
-                    ampere: "32 A",
-                    phase: "3 Phase"
-                }
+                ["10 A", "1 Phase"],
+                ["16 A", "1 Phase"],
+                ["20 A", "1 Phase"],
+                ["32 A", "3 Phase"]
             ],
 
             A2: [
-                {
-                    ampere: "16 A",
-                    phase: "1 Phase"
-                },
-                {
-                    ampere: "20 A",
-                    phase: "1 Phase"
-                },
-                {
-                    ampere: "32 A",
-                    phase: "3 Phase"
-                }
+                ["16 A", "1 Phase"],
+                ["20 A", "1 Phase"],
+                ["32 A", "3 Phase"]
             ],
 
             A3: [
-                {
-                    ampere: "20 A",
-                    phase: "1 Phase"
-                },
-                {
-                    ampere: "32 A",
-                    phase: "3 Phase"
-                }
+                ["20 A", "1 Phase"],
+                ["32 A", "3 Phase"]
             ]
-
         }
     },
 
 
     B: {
         name: "GEDUNG B",
-
         panels: {
 
             B1: [
-                {
-                    ampere: "10 A",
-                    phase: "1 Phase"
-                },
-                {
-                    ampere: "16 A",
-                    phase: "1 Phase"
-                },
-                {
-                    ampere: "32 A",
-                    phase: "3 Phase"
-                }
+                ["10 A", "1 Phase"],
+                ["16 A", "1 Phase"],
+                ["32 A", "3 Phase"]
             ],
 
             B2: [
-                {
-                    ampere: "16 A",
-                    phase: "1 Phase"
-                },
-                {
-                    ampere: "20 A",
-                    phase: "1 Phase"
-                },
-                {
-                    ampere: "40 A",
-                    phase: "3 Phase"
-                }
+                ["16 A", "1 Phase"],
+                ["20 A", "1 Phase"],
+                ["40 A", "3 Phase"]
             ]
-
         }
     },
 
 
     C: {
         name: "GEDUNG C",
-
         panels: {
 
             C1: [
-                {
-                    ampere: "10 A",
-                    phase: "1 Phase"
-                },
-                {
-                    ampere: "16 A",
-                    phase: "1 Phase"
-                },
-                {
-                    ampere: "20 A",
-                    phase: "3 Phase"
-                }
+                ["10 A", "1 Phase"],
+                ["16 A", "1 Phase"],
+                ["20 A", "3 Phase"]
             ],
 
             C2: [
-                {
-                    ampere: "20 A",
-                    phase: "1 Phase"
-                },
-                {
-                    ampere: "32 A",
-                    phase: "3 Phase"
-                }
+                ["20 A", "1 Phase"],
+                ["32 A", "3 Phase"]
             ],
 
             C3: [
-                {
-                    ampere: "16 A",
-                    phase: "1 Phase"
-                },
-                {
-                    ampere: "32 A",
-                    phase: "3 Phase"
-                },
-                {
-                    ampere: "40 A",
-                    phase: "3 Phase"
-                }
+                ["16 A", "1 Phase"],
+                ["32 A", "3 Phase"],
+                ["40 A", "3 Phase"]
             ]
-
         }
     },
 
 
     D: {
         name: "GEDUNG D",
-
         panels: {
 
             D1: [
-                {
-                    ampere: "10 A",
-                    phase: "1 Phase"
-                },
-                {
-                    ampere: "16 A",
-                    phase: "1 Phase"
-                },
-                {
-                    ampere: "20 A",
-                    phase: "1 Phase"
-                },
-                {
-                    ampere: "32 A",
-                    phase: "3 Phase"
-                }
+                ["10 A", "1 Phase"],
+                ["16 A", "1 Phase"],
+                ["20 A", "1 Phase"],
+                ["32 A", "3 Phase"]
             ],
 
             D2: [
-                {
-                    ampere: "16 A",
-                    phase: "1 Phase"
-                },
-                {
-                    ampere: "20 A",
-                    phase: "3 Phase"
-                },
-                {
-                    ampere: "40 A",
-                    phase: "3 Phase"
-                }
+                ["16 A", "1 Phase"],
+                ["20 A", "3 Phase"],
+                ["40 A", "3 Phase"]
             ]
-
         }
     },
 
 
     E: {
         name: "GEDUNG E",
-
         panels: {
 
             E1: [
-                {
-                    ampere: "10 A",
-                    phase: "1 Phase"
-                },
-                {
-                    ampere: "16 A",
-                    phase: "1 Phase"
-                },
-                {
-                    ampere: "32 A",
-                    phase: "3 Phase"
-                }
+                ["10 A", "1 Phase"],
+                ["16 A", "1 Phase"],
+                ["32 A", "3 Phase"]
             ],
 
             E2: [
-                {
-                    ampere: "20 A",
-                    phase: "1 Phase"
-                },
-                {
-                    ampere: "32 A",
-                    phase: "3 Phase"
-                }
+                ["20 A", "1 Phase"],
+                ["32 A", "3 Phase"]
             ]
-
         }
     },
 
 
     F: {
         name: "GEDUNG F",
-
         panels: {
 
             F1: [
-                {
-                    ampere: "10 A",
-                    phase: "1 Phase"
-                },
-                {
-                    ampere: "16 A",
-                    phase: "1 Phase"
-                },
-                {
-                    ampere: "20 A",
-                    phase: "3 Phase"
-                }
+                ["10 A", "1 Phase"],
+                ["16 A", "1 Phase"],
+                ["20 A", "3 Phase"]
             ],
 
             F2: [
-                {
-                    ampere: "16 A",
-                    phase: "1 Phase"
-                },
-                {
-                    ampere: "32 A",
-                    phase: "3 Phase"
-                },
-                {
-                    ampere: "40 A",
-                    phase: "3 Phase"
-                },
-                {
-                    ampere: "63 A",
-                    phase: "3 Phase"
-                }
+                ["16 A", "1 Phase"],
+                ["32 A", "3 Phase"],
+                ["40 A", "3 Phase"],
+                ["63 A", "3 Phase"]
             ]
-
         }
     }
 
@@ -311,16 +164,28 @@ const backButton =
 
 
 /* =====================================================
-   BUKA GEDUNG
+   VIEW
+===================================================== */
+
+function hideViews() {
+
+    sourceView.classList.remove("active");
+
+    buildingView.classList.remove("active");
+
+    panelView.classList.remove("active");
+
+    mcbView.classList.remove("active");
+}
+
+
+/* =====================================================
+   SUMBER → GEDUNG
 ===================================================== */
 
 function openBuildings() {
 
     level = "building";
-
-    selectedBuilding = null;
-
-    selectedPanel = null;
 
     hideViews();
 
@@ -328,7 +193,7 @@ function openBuildings() {
 
     backButton.style.visibility = "visible";
 
-    updatePath("building");
+    updateBreadcrumb("building");
 
     renderBuildings();
 }
@@ -340,95 +205,87 @@ function openBuildings() {
 
 function renderBuildings() {
 
-    const grid =
+    const container =
         document.getElementById(
-            "buildingGrid"
+            "buildingTopology"
         );
 
-    grid.innerHTML = "";
-
-    const buildings =
-        Object.entries(topology);
+    container.innerHTML = "";
 
 
-    buildings.forEach(
-        ([key, building], index) => {
+    Object.entries(topology)
+        .forEach(
+            ([key, building], index) => {
 
-            const node =
-                document.createElement("div");
+                const branch =
+                    document.createElement("div");
 
-            node.className =
-                "building-node";
+                branch.className =
+                    "building-branch";
 
 
-            node.innerHTML = `
+                branch.innerHTML = `
 
-                <div
-                    class="building-box"
-                    title="Buka ${building.name}">
+                    <div
+                        class="building-box">
 
-                    <div class="building-icon">
-                        🏢
+                        <div class="building-icon">
+                            🏢
+                        </div>
+
+                        <div class="building-name">
+                            ${building.name}
+                        </div>
+
+                        <div class="building-panel-count">
+                            ${
+                                Object.keys(
+                                    building.panels
+                                ).length
+                            }
+                            PANEL
+                        </div>
+
                     </div>
 
-                    <div class="building-name">
-                        ${building.name}
-                    </div>
-
-                    <div class="building-code">
-                        ${Object.keys(building.panels).length}
-                        PANEL
-                    </div>
-
-                </div>
-
-            `;
+                `;
 
 
-            node.onclick = () => {
+                branch.onclick = () => {
 
-                openPanels(key);
+                    openPanels(key);
 
-            };
-
-
-            grid.appendChild(node);
+                };
 
 
-            setTimeout(() => {
+                container.appendChild(branch);
 
-                node.classList.add(
-                    "visible"
-                );
 
-            }, 100 + index * 100);
+                setTimeout(() => {
 
-        }
-    );
+                    branch.classList.add("show");
 
+                }, 150 + index * 120);
+
+            }
+        );
 }
 
 
 /* =====================================================
-   BUKA PANEL
+   GEDUNG → PANEL
 ===================================================== */
 
-function openPanels(
-    buildingKey
-) {
+function openPanels(buildingKey) {
 
     selectedBuilding =
         buildingKey;
-
-    selectedPanel = null;
 
     level = "panel";
 
     hideViews();
 
-    panelView.classList.add(
-        "active"
-    );
+    panelView.classList.add("active");
 
     backButton.style.visibility =
         "visible";
@@ -442,10 +299,9 @@ function openPanels(
         ].name;
 
 
-    updatePath("panel");
+    updateBreadcrumb("panel");
 
     renderPanels();
-
 }
 
 
@@ -455,12 +311,12 @@ function openPanels(
 
 function renderPanels() {
 
-    const grid =
+    const container =
         document.getElementById(
-            "panelGrid"
+            "panelTopology"
         );
 
-    grid.innerHTML = "";
+    container.innerHTML = "";
 
 
     const panels =
@@ -469,72 +325,64 @@ function renderPanels() {
         ].panels;
 
 
-    const entries =
-        Object.entries(panels);
+    Object.entries(panels)
+        .forEach(
+            ([name, data], index) => {
+
+                const branch =
+                    document.createElement("div");
+
+                branch.className =
+                    "panel-branch";
 
 
-    entries.forEach(
-        ([name, mcb], index) => {
+                branch.innerHTML = `
 
-            const node =
-                document.createElement("div");
+                    <div class="panel-box">
 
-            node.className =
-                "panel-node";
+                        <div class="panel-icon">
+                            ⚡
+                        </div>
 
+                        <div class="panel-name">
+                            PANEL ${name}
+                        </div>
 
-            node.innerHTML = `
+                        <div class="panel-count">
+                            ${data.length} MCB
+                        </div>
 
-                <div class="panel-box">
-
-                    <div class="panel-icon">
-                        ⚡
                     </div>
 
-                    <div class="panel-name">
-                        PANEL ${name}
-                    </div>
-
-                    <div class="panel-info">
-                        ${mcb.length} MCB
-                    </div>
-
-                </div>
-
-            `;
+                `;
 
 
-            node.onclick = () => {
+                branch.onclick = () => {
 
-                openMCB(name);
+                    openMCB(name);
 
-            };
-
-
-            grid.appendChild(node);
+                };
 
 
-            setTimeout(() => {
+                container.appendChild(branch);
 
-                node.classList.add(
-                    "visible"
-                );
 
-            }, 100 + index * 120);
+                setTimeout(() => {
 
-        }
-    );
+                    branch.classList.add("show");
 
+                }, 150 + index * 130);
+
+            }
+        );
 }
 
 
 /* =====================================================
-   BUKA MCB
+   PANEL → MCB
 ===================================================== */
 
-function openMCB(
-    panelName
-) {
+function openMCB(panelName) {
 
     selectedPanel =
         panelName;
@@ -543,9 +391,7 @@ function openMCB(
 
     hideViews();
 
-    mcbView.classList.add(
-        "active"
-    );
+    mcbView.classList.add("active");
 
     backButton.style.visibility =
         "visible";
@@ -558,15 +404,14 @@ function openMCB(
 
 
     document.getElementById(
-        "panelSymbolName"
+        "panelName"
     ).textContent =
         "PANEL " + panelName;
 
 
-    updatePath("mcb");
+    updateBreadcrumb("mcb");
 
     renderMCB();
-
 }
 
 
@@ -576,12 +421,12 @@ function openMCB(
 
 function renderMCB() {
 
-    const list =
+    const container =
         document.getElementById(
-            "mcbList"
+            "mcbTopology"
         );
 
-    list.innerHTML = "";
+    container.innerHTML = "";
 
 
     const data =
@@ -593,24 +438,24 @@ function renderMCB() {
 
 
     data.forEach(
-        (mcb, index) => {
+        (item, index) => {
 
-            const item =
+            const node =
                 document.createElement("div");
 
-            item.className =
-                "mcb-item";
+            node.className =
+                "mcb-node";
 
 
             const phaseClass =
-                mcb.phase === "3 Phase"
+                item[1] === "3 Phase"
                     ? "three"
                     : "";
 
 
-            item.innerHTML = `
+            node.innerHTML = `
 
-                <div class="mcb-no">
+                <div class="mcb-number">
                     MCB ${String(
                         index + 1
                     ).padStart(2, "0")}
@@ -621,33 +466,29 @@ function renderMCB() {
                 </div>
 
                 <div class="mcb-ampere">
-                    ${mcb.ampere}
+                    ${item[0]}
                 </div>
 
                 <div class="
                     mcb-phase
-                    ${phaseClass}
-                ">
-                    ${mcb.phase}
+                    ${phaseClass}">
+                    ${item[1]}
                 </div>
 
             `;
 
 
-            list.appendChild(item);
+            container.appendChild(node);
 
 
             setTimeout(() => {
 
-                item.classList.add(
-                    "visible"
-                );
+                node.classList.add("show");
 
-            }, 100 + index * 120);
+            }, 150 + index * 120);
 
         }
     );
-
 }
 
 
@@ -685,80 +526,43 @@ function goBack() {
 
         hideViews();
 
-        sourceView.classList.add(
-            "active"
-        );
+        sourceView.classList.add("active");
 
         backButton.style.visibility =
             "hidden";
 
-        updatePath("source");
-
+        updateBreadcrumb("source");
     }
-
 }
 
 
 /* =====================================================
-   HIDE VIEW
+   BREADCRUMB
 ===================================================== */
 
-function hideViews() {
-
-    sourceView.classList.remove(
-        "active"
-    );
-
-    buildingView.classList.remove(
-        "active"
-    );
-
-    panelView.classList.remove(
-        "active"
-    );
-
-    mcbView.classList.remove(
-        "active"
-    );
-
-}
-
-
-/* =====================================================
-   PATH / BREADCRUMB
-===================================================== */
-
-function updatePath(
-    current
-) {
+function updateBreadcrumb(current) {
 
     const source =
         document.getElementById(
-            "pathSource"
+            "crumbSource"
         );
 
     const building =
         document.getElementById(
-            "pathBuilding"
+            "crumbBuilding"
         );
 
     const panel =
         document.getElementById(
-            "pathPanel"
+            "crumbPanel"
         );
 
 
-    source.classList.remove(
-        "current"
-    );
+    source.classList.remove("active");
 
-    building.classList.remove(
-        "current"
-    );
+    building.classList.remove("active");
 
-    panel.classList.remove(
-        "current"
-    );
+    panel.classList.remove("active");
 
 
     building.textContent = "-";
@@ -768,63 +572,41 @@ function updatePath(
 
     if (current === "source") {
 
-        source.textContent =
-            "SUMBER PLN";
-
-        source.classList.add(
-            "current"
-        );
+        source.classList.add("active");
 
     }
 
 
     if (current === "building") {
 
-        source.textContent =
-            "SUMBER PLN";
-
-        source.classList.add(
-            "current"
-        );
+        source.classList.add("active");
 
         building.textContent =
             "GEDUNG";
 
-        building.classList.add(
-            "current"
-        );
+        building.classList.add("active");
 
     }
 
 
     if (current === "panel") {
 
-        source.textContent =
-            "SUMBER PLN";
-
         building.textContent =
             topology[
                 selectedBuilding
             ].name;
 
-        building.classList.add(
-            "current"
-        );
+        building.classList.add("active");
 
         panel.textContent =
             "PANEL";
 
-        panel.classList.add(
-            "current"
-        );
+        panel.classList.add("active");
 
     }
 
 
     if (current === "mcb") {
-
-        source.textContent =
-            "SUMBER PLN";
 
         building.textContent =
             topology[
@@ -835,12 +617,9 @@ function updatePath(
             "PANEL " +
             selectedPanel;
 
-        panel.classList.add(
-            "current"
-        );
+        panel.classList.add("active");
 
     }
-
 }
 
 
@@ -852,12 +631,10 @@ window.addEventListener(
     "DOMContentLoaded",
     () => {
 
-        level = "source";
-
         backButton.style.visibility =
             "hidden";
 
-        updatePath("source");
+        updateBreadcrumb("source");
 
     }
 );
