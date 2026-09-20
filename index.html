@@ -3,9 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Topologi Instalasi Arus Kuat</title>
 
@@ -14,133 +12,110 @@
 
 <body>
 
-    <!-- =====================================================
-         HEADER
-    ====================================================== -->
+    <header class="topbar">
 
-    <header class="header">
+        <div class="brand">
+            <div class="brand-mark">⚡</div>
 
-        <div class="header-logo">
-            ⚡
+            <div>
+                <div class="brand-title">
+                    INSTALASI ARUS KUAT
+                </div>
+
+                <div class="brand-subtitle">
+                    Topologi Distribusi Listrik Gedung
+                </div>
+            </div>
         </div>
 
-        <div>
-            <div class="header-small">
-                ELECTRICAL POWER SYSTEM
-            </div>
-
-            <h1>
-                TOPOLOGI INSTALASI ARUS KUAT
-            </h1>
-
-            <p>
-                Sistem Distribusi Listrik Gedung
-            </p>
+        <div class="topbar-right">
+            SISTEM DISTRIBUSI
         </div>
 
     </header>
 
 
-    <!-- =====================================================
-         BREADCRUMB / NAVIGASI
-    ====================================================== -->
+    <main>
 
-    <div class="navigation">
+        <!-- NAVIGASI -->
 
-        <button
-            id="backButton"
-            class="back-button"
-            onclick="goBack()">
+        <div class="navigation">
 
-            ← KEMBALI
+            <button
+                id="backButton"
+                class="back-button"
+                onclick="goBack()">
 
-        </button>
+                ← Kembali
 
-        <div class="breadcrumb">
+            </button>
 
-            <span id="breadcrumbSource">
-                SUMBER PLN
-            </span>
+            <div class="path">
 
-            <span class="arrow">
-                →
-            </span>
+                <span id="pathSource" class="current">
+                    SUMBER PLN
+                </span>
 
-            <span id="breadcrumbBuilding">
-                -
-            </span>
+                <span class="path-separator">/</span>
 
-            <span class="arrow">
-                →
-            </span>
+                <span id="pathBuilding">
+                    -
+                </span>
 
-            <span id="breadcrumbPanel">
-                -
-            </span>
+                <span class="path-separator">/</span>
+
+                <span id="pathPanel">
+                    -
+                </span>
+
+            </div>
 
         </div>
 
-    </div>
-
-
-    <!-- =====================================================
-         MAIN CONTENT
-    ====================================================== -->
-
-    <main>
-
 
         <!-- =================================================
-             LEVEL 1
-             SUMBER PLN
+             LEVEL 1 : SUMBER
         ================================================== -->
 
         <section
             id="sourceView"
             class="view active">
 
-            <div class="source-area">
+            <div class="topology-source">
 
-                <div class="source-line-top"></div>
+                <div class="source-box"
+                     onclick="openBuildings()">
 
-                <button
-                    class="source-card"
-                    onclick="openBuildings()">
-
-                    <div class="source-icon">
+                    <div class="source-symbol">
                         ⚡
                     </div>
 
-                    <div class="source-text">
+                    <div class="source-content">
 
-                        <span>
-                            SUMBER LISTRIK
-                        </span>
+                        <div class="source-label">
+                            SUMBER UTAMA
+                        </div>
 
-                        <h2>
+                        <h1>
                             PLN
-                        </h2>
+                        </h1>
 
-                        <small>
-                            KLIK UNTUK MELIHAT GEDUNG
-                        </small>
+                        <p>
+                            Klik untuk melihat jaringan distribusi
+                        </p>
 
                     </div>
 
-                    <div class="source-arrow">
-                        →
-                    </div>
+                </div>
 
-                </button>
 
-                <div class="source-line-bottom"></div>
+                <div class="vertical-line source-line"></div>
 
-                <div class="source-hint">
+                <div class="source-node"></div>
 
-                    <span class="pulse"></span>
 
-                    Klik sumber listrik untuk melihat distribusi gedung
-
+                <div class="click-note">
+                    Klik sumber untuk membuka topologi
                 </div>
 
             </div>
@@ -149,36 +124,37 @@
 
 
         <!-- =================================================
-             LEVEL 2
-             GEDUNG
+             LEVEL 2 : GEDUNG
         ================================================== -->
 
         <section
             id="buildingView"
             class="view">
 
-            <div class="section-title">
+            <div class="diagram-title">
 
-                <span class="section-label">
-                    DISTRIBUSI LISTRIK
+                <span>
+                    DISTRIBUSI UTAMA
                 </span>
 
                 <h2>
-                    PILIH GEDUNG
+                    Jaringan Gedung
                 </h2>
-
-                <p>
-                    Pilih gedung untuk melihat panel distribusinya
-                </p>
 
             </div>
 
 
-            <div
-                id="buildingGrid"
-                class="building-grid">
+            <div class="building-topology">
 
-                <!-- Gedung dibuat oleh JavaScript -->
+                <div class="main-vertical"></div>
+
+                <div
+                    id="buildingGrid"
+                    class="building-grid">
+
+                    <!-- dibuat oleh JS -->
+
+                </div>
 
             </div>
 
@@ -186,36 +162,37 @@
 
 
         <!-- =================================================
-             LEVEL 3
-             PANEL
+             LEVEL 3 : PANEL
         ================================================== -->
 
         <section
             id="panelView"
             class="view">
 
-            <div class="section-title">
+            <div class="diagram-title">
 
-                <span class="section-label">
-                    DISTRIBUSI PANEL
+                <span>
+                    DISTRIBUSI GEDUNG
                 </span>
 
-                <h2 id="selectedBuildingTitle">
+                <h2 id="buildingTitle">
                     GEDUNG
                 </h2>
-
-                <p>
-                    Pilih panel untuk melihat data MCB
-                </p>
 
             </div>
 
 
-            <div
-                id="panelGrid"
-                class="panel-grid">
+            <div class="panel-topology">
 
-                <!-- Panel dibuat oleh JavaScript -->
+                <div class="panel-main-line"></div>
+
+                <div
+                    id="panelGrid"
+                    class="panel-grid">
+
+                    <!-- dibuat oleh JS -->
+
+                </div>
 
             </div>
 
@@ -223,132 +200,49 @@
 
 
         <!-- =================================================
-             LEVEL 4
-             DETAIL MCB
+             LEVEL 4 : MCB
         ================================================== -->
 
         <section
-            id="detailView"
+            id="mcbView"
             class="view">
 
-            <div class="section-title">
+            <div class="diagram-title">
 
-                <span class="section-label">
-                    DATA PANEL
+                <span>
+                    PANEL DISTRIBUSI
                 </span>
 
-                <h2 id="selectedPanelTitle">
+                <h2 id="panelTitle">
                     PANEL
                 </h2>
-
-                <p>
-                    Informasi MCB pada panel
-                </p>
 
             </div>
 
 
-            <div class="detail-layout">
+            <div class="mcb-topology">
 
+                <div class="panel-symbol">
 
-                <!-- INFO PANEL -->
-
-                <div class="panel-info-card">
-
-                    <div class="big-panel-icon">
-                        ⚙
+                    <div class="panel-symbol-top">
+                        ⚡
                     </div>
 
-                    <div>
-
-                        <span>
-                            PANEL
-                        </span>
-
-                        <h2 id="detailPanelName">
-                            PANEL
-                        </h2>
-
-                    </div>
-
-                </div>
-
-
-                <!-- JUMLAH MCB -->
-
-                <div class="mcb-count-card">
-
-                    <span>
-                        JUMLAH MCB
-                    </span>
-
-                    <strong id="mcbCount">
-                        0
+                    <strong id="panelSymbolName">
+                        PANEL
                     </strong>
 
-                    <small>
-                        Circuit Breaker
-                    </small>
-
                 </div>
 
 
-                <!-- TABEL MCB -->
-
-                <div class="mcb-table-card">
-
-                    <div class="table-header">
-
-                        <div>
-                            <span>
-                                DATA MCB
-                            </span>
-
-                            <h3>
-                                Konfigurasi Panel
-                            </h3>
-                        </div>
-
-                    </div>
+                <div class="mcb-main-line"></div>
 
 
-                    <div class="table-wrapper">
+                <div
+                    id="mcbList"
+                    class="mcb-list">
 
-                        <table>
-
-                            <thead>
-
-                                <tr>
-
-                                    <th>
-                                        NO
-                                    </th>
-
-                                    <th>
-                                        MCB
-                                    </th>
-
-                                    <th>
-                                        AMPERE
-                                    </th>
-
-                                    <th>
-                                        PHASE
-                                    </th>
-
-                                </tr>
-
-                            </thead>
-
-                            <tbody id="mcbTableBody">
-
-                                <!-- Data MCB dibuat JavaScript -->
-
-                            </tbody>
-
-                        </table>
-
-                    </div>
+                    <!-- MCB dibuat JS -->
 
                 </div>
 
@@ -356,23 +250,18 @@
 
         </section>
 
-
     </main>
 
 
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-
     <footer>
 
-        <div>
-            ⚡ ELECTRICAL POWER SYSTEM
-        </div>
+        <span>
+            ELECTRICAL POWER SYSTEM
+        </span>
 
-        <div>
-            TOPOLOGI ARUS KUAT
-        </div>
+        <span>
+            Topologi Instalasi Listrik Arus Kuat
+        </span>
 
     </footer>
 
