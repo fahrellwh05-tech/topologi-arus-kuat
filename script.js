@@ -1,349 +1,279 @@
 /* =====================================================
    DATA TOPOLOGI
-=====================================================
 
-   Struktur:
+   Format:
 
-   PLN
-    └── Gedung
-          └── Panel
-                └── MCB
+   GEDUNG
+      |
+      └── PANEL
+            |
+            └── MCB
 
 ===================================================== */
 
-
-const topologyData = {
+const topology = {
 
     A: {
-
         name: "GEDUNG A",
 
         panels: {
 
-            "A1": [
+            A1: [
                 {
-                    name: "MCB 01",
                     ampere: "10 A",
                     phase: "1 Phase"
                 },
                 {
-                    name: "MCB 02",
                     ampere: "16 A",
                     phase: "1 Phase"
                 },
                 {
-                    name: "MCB 03",
                     ampere: "20 A",
                     phase: "1 Phase"
                 },
                 {
-                    name: "MCB 04",
                     ampere: "32 A",
                     phase: "3 Phase"
                 }
             ],
 
-            "A2": [
+            A2: [
                 {
-                    name: "MCB 01",
                     ampere: "16 A",
                     phase: "1 Phase"
                 },
                 {
-                    name: "MCB 02",
                     ampere: "20 A",
                     phase: "1 Phase"
                 },
                 {
-                    name: "MCB 03",
                     ampere: "32 A",
                     phase: "3 Phase"
                 }
             ],
 
-            "A3": [
+            A3: [
                 {
-                    name: "MCB 01",
-                    ampere: "10 A",
-                    phase: "1 Phase"
-                },
-                {
-                    name: "MCB 02",
-                    ampere: "16 A",
-                    phase: "1 Phase"
-                },
-                {
-                    name: "MCB 03",
                     ampere: "20 A",
-                    phase: "3 Phase"
+                    phase: "1 Phase"
                 },
                 {
-                    name: "MCB 04",
-                    ampere: "40 A",
+                    ampere: "32 A",
                     phase: "3 Phase"
                 }
             ]
 
         }
-
     },
 
 
     B: {
-
         name: "GEDUNG B",
 
         panels: {
 
-            "B1": [
+            B1: [
                 {
-                    name: "MCB 01",
                     ampere: "10 A",
                     phase: "1 Phase"
                 },
                 {
-                    name: "MCB 02",
                     ampere: "16 A",
                     phase: "1 Phase"
                 },
                 {
-                    name: "MCB 03",
                     ampere: "32 A",
                     phase: "3 Phase"
                 }
             ],
 
-            "B2": [
+            B2: [
                 {
-                    name: "MCB 01",
                     ampere: "16 A",
                     phase: "1 Phase"
                 },
                 {
-                    name: "MCB 02",
                     ampere: "20 A",
                     phase: "1 Phase"
                 },
                 {
-                    name: "MCB 03",
                     ampere: "40 A",
                     phase: "3 Phase"
                 }
             ]
 
         }
-
     },
 
 
     C: {
-
         name: "GEDUNG C",
 
         panels: {
 
-            "C1": [
+            C1: [
                 {
-                    name: "MCB 01",
                     ampere: "10 A",
                     phase: "1 Phase"
                 },
                 {
-                    name: "MCB 02",
                     ampere: "16 A",
                     phase: "1 Phase"
                 },
                 {
-                    name: "MCB 03",
                     ampere: "20 A",
                     phase: "3 Phase"
                 }
             ],
 
-            "C2": [
+            C2: [
                 {
-                    name: "MCB 01",
                     ampere: "20 A",
                     phase: "1 Phase"
                 },
                 {
-                    name: "MCB 02",
                     ampere: "32 A",
                     phase: "3 Phase"
                 }
             ],
 
-            "C3": [
+            C3: [
                 {
-                    name: "MCB 01",
                     ampere: "16 A",
                     phase: "1 Phase"
                 },
                 {
-                    name: "MCB 02",
                     ampere: "32 A",
                     phase: "3 Phase"
                 },
                 {
-                    name: "MCB 03",
                     ampere: "40 A",
                     phase: "3 Phase"
                 }
             ]
 
         }
-
     },
 
 
     D: {
-
         name: "GEDUNG D",
 
         panels: {
 
-            "D1": [
+            D1: [
                 {
-                    name: "MCB 01",
                     ampere: "10 A",
                     phase: "1 Phase"
                 },
                 {
-                    name: "MCB 02",
                     ampere: "16 A",
                     phase: "1 Phase"
                 },
                 {
-                    name: "MCB 03",
                     ampere: "20 A",
                     phase: "1 Phase"
                 },
                 {
-                    name: "MCB 04",
                     ampere: "32 A",
                     phase: "3 Phase"
                 }
             ],
 
-            "D2": [
+            D2: [
                 {
-                    name: "MCB 01",
                     ampere: "16 A",
                     phase: "1 Phase"
                 },
                 {
-                    name: "MCB 02",
                     ampere: "20 A",
                     phase: "3 Phase"
                 },
                 {
-                    name: "MCB 03",
                     ampere: "40 A",
                     phase: "3 Phase"
                 }
             ]
 
         }
-
     },
 
 
     E: {
-
         name: "GEDUNG E",
 
         panels: {
 
-            "E1": [
+            E1: [
                 {
-                    name: "MCB 01",
                     ampere: "10 A",
                     phase: "1 Phase"
                 },
                 {
-                    name: "MCB 02",
                     ampere: "16 A",
                     phase: "1 Phase"
                 },
                 {
-                    name: "MCB 03",
                     ampere: "32 A",
                     phase: "3 Phase"
                 }
             ],
 
-            "E2": [
+            E2: [
                 {
-                    name: "MCB 01",
                     ampere: "20 A",
                     phase: "1 Phase"
                 },
                 {
-                    name: "MCB 02",
                     ampere: "32 A",
-                    phase: "3 Phase"
-                },
-                {
-                    name: "MCB 03",
-                    ampere: "40 A",
                     phase: "3 Phase"
                 }
             ]
 
         }
-
     },
 
 
     F: {
-
         name: "GEDUNG F",
 
         panels: {
 
-            "F1": [
+            F1: [
                 {
-                    name: "MCB 01",
                     ampere: "10 A",
                     phase: "1 Phase"
                 },
                 {
-                    name: "MCB 02",
                     ampere: "16 A",
                     phase: "1 Phase"
                 },
                 {
-                    name: "MCB 03",
                     ampere: "20 A",
                     phase: "3 Phase"
                 }
             ],
 
-            "F2": [
+            F2: [
                 {
-                    name: "MCB 01",
                     ampere: "16 A",
                     phase: "1 Phase"
                 },
                 {
-                    name: "MCB 02",
                     ampere: "32 A",
                     phase: "3 Phase"
                 },
                 {
-                    name: "MCB 03",
                     ampere: "40 A",
                     phase: "3 Phase"
                 },
                 {
-                    name: "MCB 04",
                     ampere: "63 A",
                     phase: "3 Phase"
                 }
             ]
 
         }
-
     }
 
 };
@@ -353,7 +283,7 @@ const topologyData = {
    STATE
 ===================================================== */
 
-let currentLevel = "source";
+let level = "source";
 
 let selectedBuilding = null;
 
@@ -373,14 +303,8 @@ const buildingView =
 const panelView =
     document.getElementById("panelView");
 
-const detailView =
-    document.getElementById("detailView");
-
-const buildingGrid =
-    document.getElementById("buildingGrid");
-
-const panelGrid =
-    document.getElementById("panelGrid");
+const mcbView =
+    document.getElementById("mcbView");
 
 const backButton =
     document.getElementById("backButton");
@@ -392,121 +316,92 @@ const backButton =
 
 function openBuildings() {
 
-    currentLevel = "building";
+    level = "building";
 
     selectedBuilding = null;
 
     selectedPanel = null;
 
-    hideAllViews();
+    hideViews();
 
     buildingView.classList.add("active");
 
     backButton.style.visibility = "visible";
 
-    updateBreadcrumb(
-        "building"
-    );
+    updatePath("building");
 
     renderBuildings();
-
 }
 
 
 /* =====================================================
-   TAMPILKAN GEDUNG
+   GEDUNG
 ===================================================== */
 
 function renderBuildings() {
 
-    buildingGrid.innerHTML = "";
+    const grid =
+        document.getElementById(
+            "buildingGrid"
+        );
 
-    const buildingKeys =
-        Object.keys(topologyData);
+    grid.innerHTML = "";
 
-
-    buildingKeys.forEach(
-        (key, index) => {
-
-            const building =
-                topologyData[key];
+    const buildings =
+        Object.entries(topology);
 
 
-            const panelCount =
-                Object.keys(
-                    building.panels
-                ).length;
+    buildings.forEach(
+        ([key, building], index) => {
+
+            const node =
+                document.createElement("div");
+
+            node.className =
+                "building-node";
 
 
-            const card =
-                document.createElement(
-                    "button"
-                );
+            node.innerHTML = `
 
+                <div
+                    class="building-box"
+                    title="Buka ${building.name}">
 
-            card.className =
-                "building-card";
+                    <div class="building-icon">
+                        🏢
+                    </div>
 
-
-            card.innerHTML = `
-
-                <div class="building-icon">
-                    🏢
-                </div>
-
-                <div>
-
-                    <span>
-                        GEDUNG
-                    </span>
-
-                    <h3>
+                    <div class="building-name">
                         ${building.name}
-                    </h3>
+                    </div>
 
-                    <small>
-                        ${panelCount} PANEL
-                    </small>
+                    <div class="building-code">
+                        ${Object.keys(building.panels).length}
+                        PANEL
+                    </div>
 
-                </div>
-
-                <div class="building-arrow">
-                    →
                 </div>
 
             `;
 
 
-            card.addEventListener(
-                "click",
-                () => {
+            node.onclick = () => {
 
-                    openPanels(key);
+                openPanels(key);
 
-                }
-            );
+            };
 
 
-            buildingGrid.appendChild(
-                card
-            );
+            grid.appendChild(node);
 
 
-            /*
-             * Animasi muncul
-             * satu per satu
-             */
+            setTimeout(() => {
 
-            setTimeout(
-                () => {
+                node.classList.add(
+                    "visible"
+                );
 
-                    card.classList.add(
-                        "show"
-                    );
-
-                },
-                100 + (index * 120)
-            );
+            }, 100 + index * 100);
 
         }
     );
@@ -525,13 +420,11 @@ function openPanels(
     selectedBuilding =
         buildingKey;
 
-    selectedPanel =
-        null;
+    selectedPanel = null;
 
-    currentLevel =
-        "panel";
+    level = "panel";
 
-    hideAllViews();
+    hideViews();
 
     panelView.classList.add(
         "active"
@@ -541,103 +434,93 @@ function openPanels(
         "visible";
 
 
-    const building =
-        topologyData[
-            buildingKey
-        ];
-
-
     document.getElementById(
-        "selectedBuildingTitle"
+        "buildingTitle"
     ).textContent =
-        building.name;
+        topology[
+            buildingKey
+        ].name;
 
 
-    updateBreadcrumb(
-        "panel"
-    );
+    updatePath("panel");
 
-
-    renderPanels(
-        buildingKey
-    );
+    renderPanels();
 
 }
 
 
 /* =====================================================
-   TAMPILKAN PANEL
+   PANEL
 ===================================================== */
 
-function renderPanels(
-    buildingKey
-) {
+function renderPanels() {
 
-    panelGrid.innerHTML = "";
+    const grid =
+        document.getElementById(
+            "panelGrid"
+        );
 
-
-    const building =
-        topologyData[
-            buildingKey
-        ];
+    grid.innerHTML = "";
 
 
     const panels =
-        Object.entries(
-            building.panels
-        );
+        topology[
+            selectedBuilding
+        ].panels;
 
 
-    panels.forEach(
-        ([panelName, mcbData]) => {
+    const entries =
+        Object.entries(panels);
 
 
-            const card =
-                document.createElement(
-                    "button"
-                );
+    entries.forEach(
+        ([name, mcb], index) => {
+
+            const node =
+                document.createElement("div");
+
+            node.className =
+                "panel-node";
 
 
-            card.className =
-                "panel-card";
+            node.innerHTML = `
 
+                <div class="panel-box">
 
-            card.innerHTML = `
+                    <div class="panel-icon">
+                        ⚡
+                    </div>
 
-                <div class="panel-icon">
-                    ⚙
-                </div>
+                    <div class="panel-name">
+                        PANEL ${name}
+                    </div>
 
-                <h3>
-                    PANEL ${panelName}
-                </h3>
+                    <div class="panel-info">
+                        ${mcb.length} MCB
+                    </div>
 
-                <span>
-                    ${building.name}
-                </span>
-
-                <div class="panel-mcb-count">
-                    ${mcbData.length} MCB
                 </div>
 
             `;
 
 
-            card.addEventListener(
-                "click",
-                () => {
+            node.onclick = () => {
 
-                    openPanelDetail(
-                        panelName
-                    );
+                openMCB(name);
 
-                }
-            );
+            };
 
 
-            panelGrid.appendChild(
-                card
-            );
+            grid.appendChild(node);
+
+
+            setTimeout(() => {
+
+                node.classList.add(
+                    "visible"
+                );
+
+            }, 100 + index * 120);
 
         }
     );
@@ -646,22 +529,21 @@ function renderPanels(
 
 
 /* =====================================================
-   BUKA DETAIL PANEL
+   BUKA MCB
 ===================================================== */
 
-function openPanelDetail(
+function openMCB(
     panelName
 ) {
 
     selectedPanel =
         panelName;
 
-    currentLevel =
-        "detail";
+    level = "mcb";
 
-    hideAllViews();
+    hideViews();
 
-    detailView.classList.add(
+    mcbView.classList.add(
         "active"
     );
 
@@ -669,99 +551,101 @@ function openPanelDetail(
         "visible";
 
 
-    const mcbData =
-        topologyData[
+    document.getElementById(
+        "panelTitle"
+    ).textContent =
+        "PANEL " + panelName;
+
+
+    document.getElementById(
+        "panelSymbolName"
+    ).textContent =
+        "PANEL " + panelName;
+
+
+    updatePath("mcb");
+
+    renderMCB();
+
+}
+
+
+/* =====================================================
+   MCB
+===================================================== */
+
+function renderMCB() {
+
+    const list =
+        document.getElementById(
+            "mcbList"
+        );
+
+    list.innerHTML = "";
+
+
+    const data =
+        topology[
             selectedBuilding
         ].panels[
-            panelName
+            selectedPanel
         ];
 
 
-    /*
-     * Judul
-     */
-
-    document.getElementById(
-        "selectedPanelTitle"
-    ).textContent =
-        "PANEL " + panelName;
-
-
-    document.getElementById(
-        "detailPanelName"
-    ).textContent =
-        "PANEL " + panelName;
-
-
-    /*
-     * Jumlah MCB
-     */
-
-    document.getElementById(
-        "mcbCount"
-    ).textContent =
-        mcbData.length;
-
-
-    /*
-     * Tabel
-     */
-
-    const tableBody =
-        document.getElementById(
-            "mcbTableBody"
-        );
-
-
-    tableBody.innerHTML = "";
-
-
-    mcbData.forEach(
+    data.forEach(
         (mcb, index) => {
 
-            const row =
-                document.createElement(
-                    "tr"
-                );
+            const item =
+                document.createElement("div");
+
+            item.className =
+                "mcb-item";
 
 
             const phaseClass =
-                mcb.phase === "1 Phase"
-                    ? "phase-1"
-                    : "phase-3";
+                mcb.phase === "3 Phase"
+                    ? "three"
+                    : "";
 
 
-            row.innerHTML = `
+            item.innerHTML = `
 
-                <td>
-                    ${index + 1}
-                </td>
+                <div class="mcb-no">
+                    MCB ${String(
+                        index + 1
+                    ).padStart(2, "0")}
+                </div>
 
-                <td>
-                    ${mcb.name}
-                </td>
+                <div class="mcb-name">
+                    Circuit Breaker
+                </div>
 
-                <td>
+                <div class="mcb-ampere">
                     ${mcb.ampere}
-                </td>
+                </div>
 
-                <td class="${phaseClass}">
+                <div class="
+                    mcb-phase
+                    ${phaseClass}
+                ">
                     ${mcb.phase}
-                </td>
+                </div>
 
             `;
 
 
-            tableBody.appendChild(
-                row
-            );
+            list.appendChild(item);
+
+
+            setTimeout(() => {
+
+                item.classList.add(
+                    "visible"
+                );
+
+            }, 100 + index * 120);
 
         }
-    );
-
-
-    updateBreadcrumb(
-        "detail"
     );
 
 }
@@ -773,60 +657,33 @@ function openPanelDetail(
 
 function goBack() {
 
-
-    /*
-     * Detail → Panel
-     */
-
-    if (
-        currentLevel ===
-        "detail"
-    ) {
+    if (level === "mcb") {
 
         openPanels(
             selectedBuilding
         );
 
         return;
-
     }
 
 
-    /*
-     * Panel → Gedung
-     */
-
-    if (
-        currentLevel ===
-        "panel"
-    ) {
+    if (level === "panel") {
 
         openBuildings();
 
         return;
-
     }
 
 
-    /*
-     * Gedung → Sumber
-     */
+    if (level === "building") {
 
-    if (
-        currentLevel ===
-        "building"
-    ) {
+        level = "source";
 
-        currentLevel =
-            "source";
+        selectedBuilding = null;
 
-        selectedBuilding =
-            null;
+        selectedPanel = null;
 
-        selectedPanel =
-            null;
-
-        hideAllViews();
+        hideViews();
 
         sourceView.classList.add(
             "active"
@@ -835,9 +692,7 @@ function goBack() {
         backButton.style.visibility =
             "hidden";
 
-        updateBreadcrumb(
-            "source"
-        );
+        updatePath("source");
 
     }
 
@@ -845,10 +700,10 @@ function goBack() {
 
 
 /* =====================================================
-   HIDE SEMUA VIEW
+   HIDE VIEW
 ===================================================== */
 
-function hideAllViews() {
+function hideViews() {
 
     sourceView.classList.remove(
         "active"
@@ -862,7 +717,7 @@ function hideAllViews() {
         "active"
     );
 
-    detailView.classList.remove(
+    mcbView.classList.remove(
         "active"
     );
 
@@ -870,144 +725,118 @@ function hideAllViews() {
 
 
 /* =====================================================
-   BREADCRUMB
+   PATH / BREADCRUMB
 ===================================================== */
 
-function updateBreadcrumb(
-    level
+function updatePath(
+    current
 ) {
 
     const source =
         document.getElementById(
-            "breadcrumbSource"
+            "pathSource"
         );
 
     const building =
         document.getElementById(
-            "breadcrumbBuilding"
+            "pathBuilding"
         );
 
     const panel =
         document.getElementById(
-            "breadcrumbPanel"
+            "pathPanel"
         );
 
 
     source.classList.remove(
-        "active"
+        "current"
     );
 
     building.classList.remove(
-        "active"
+        "current"
     );
 
     panel.classList.remove(
-        "active"
+        "current"
     );
 
 
-    building.textContent =
-        "-";
+    building.textContent = "-";
 
-    panel.textContent =
-        "-";
+    panel.textContent = "-";
 
 
-    /*
-     * LEVEL SOURCE
-     */
+    if (current === "source") {
 
-    if (
-        level === "source"
-    ) {
+        source.textContent =
+            "SUMBER PLN";
 
         source.classList.add(
-            "active"
+            "current"
         );
 
     }
 
 
-    /*
-     * LEVEL BUILDING
-     */
+    if (current === "building") {
 
-    if (
-        level === "building"
-    ) {
+        source.textContent =
+            "SUMBER PLN";
 
         source.classList.add(
-            "active"
+            "current"
         );
 
         building.textContent =
             "GEDUNG";
 
         building.classList.add(
-            "active"
+            "current"
         );
 
     }
 
 
-    /*
-     * LEVEL PANEL
-     */
+    if (current === "panel") {
 
-    if (
-        level === "panel"
-    ) {
-
-        source.classList.add(
-            "active"
-        );
+        source.textContent =
+            "SUMBER PLN";
 
         building.textContent =
-            topologyData[
+            topology[
                 selectedBuilding
             ].name;
 
         building.classList.add(
-            "active"
+            "current"
         );
 
         panel.textContent =
             "PANEL";
 
         panel.classList.add(
-            "active"
+            "current"
         );
 
     }
 
 
-    /*
-     * LEVEL DETAIL
-     */
+    if (current === "mcb") {
 
-    if (
-        level === "detail"
-    ) {
-
-        source.classList.add(
-            "active"
-        );
+        source.textContent =
+            "SUMBER PLN";
 
         building.textContent =
-            topologyData[
+            topology[
                 selectedBuilding
             ].name;
-
-        building.classList.add(
-            "active"
-        );
 
         panel.textContent =
             "PANEL " +
             selectedPanel;
 
         panel.classList.add(
-            "active"
+            "current"
         );
 
     }
@@ -1016,22 +845,19 @@ function updateBreadcrumb(
 
 
 /* =====================================================
-   INITIAL STATE
+   AWAL
 ===================================================== */
 
 window.addEventListener(
-    "load",
+    "DOMContentLoaded",
     () => {
 
-        currentLevel =
-            "source";
+        level = "source";
 
         backButton.style.visibility =
             "hidden";
 
-        updateBreadcrumb(
-            "source"
-        );
+        updatePath("source");
 
     }
 );
