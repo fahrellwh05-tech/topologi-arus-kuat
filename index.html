@@ -12,110 +12,108 @@
 
 <body>
 
-    <header class="topbar">
+    <header class="header">
 
         <div class="brand">
-            <div class="brand-mark">⚡</div>
+
+            <div class="brand-icon">
+                ⚡
+            </div>
 
             <div>
-                <div class="brand-title">
-                    INSTALASI ARUS KUAT
+                <div class="brand-small">
+                    ELECTRICAL POWER SYSTEM
                 </div>
 
-                <div class="brand-subtitle">
-                    Topologi Distribusi Listrik Gedung
-                </div>
+                <h1>
+                    TOPOLOGI INSTALASI ARUS KUAT
+                </h1>
+
+                <p>
+                    Sistem Distribusi Listrik Gedung
+                </p>
             </div>
-        </div>
 
-        <div class="topbar-right">
-            SISTEM DISTRIBUSI
         </div>
 
     </header>
 
 
-    <main>
+    <div class="toolbar">
 
-        <!-- NAVIGASI -->
+        <button
+            id="backButton"
+            onclick="goBack()">
 
-        <div class="navigation">
+            ← KEMBALI
 
-            <button
-                id="backButton"
-                class="back-button"
-                onclick="goBack()">
+        </button>
 
-                ← Kembali
+        <div class="breadcrumb">
 
-            </button>
+            <span id="crumbSource">
+                SUMBER PLN
+            </span>
 
-            <div class="path">
+            <b>›</b>
 
-                <span id="pathSource" class="current">
-                    SUMBER PLN
-                </span>
+            <span id="crumbBuilding">
+                -
+            </span>
 
-                <span class="path-separator">/</span>
+            <b>›</b>
 
-                <span id="pathBuilding">
-                    -
-                </span>
-
-                <span class="path-separator">/</span>
-
-                <span id="pathPanel">
-                    -
-                </span>
-
-            </div>
+            <span id="crumbPanel">
+                -
+            </span>
 
         </div>
 
+    </div>
+
+
+    <main>
+
 
         <!-- =================================================
-             LEVEL 1 : SUMBER
+             SUMBER
         ================================================== -->
 
         <section
             id="sourceView"
             class="view active">
 
-            <div class="topology-source">
+            <div class="source-page">
 
-                <div class="source-box"
-                     onclick="openBuildings()">
+                <div
+                    class="source-node"
+                    onclick="openBuildings()">
 
                     <div class="source-symbol">
                         ⚡
                     </div>
 
-                    <div class="source-content">
-
-                        <div class="source-label">
+                    <div>
+                        <small>
                             SUMBER UTAMA
-                        </div>
+                        </small>
 
-                        <h1>
+                        <strong>
                             PLN
-                        </h1>
-
-                        <p>
-                            Klik untuk melihat jaringan distribusi
-                        </p>
-
+                        </strong>
                     </div>
 
                 </div>
 
 
-                <div class="vertical-line source-line"></div>
-
-                <div class="source-node"></div>
+                <div class="line vertical source-to-bus"></div>
 
 
-                <div class="click-note">
-                    Klik sumber untuk membuka topologi
+                <div class="bus-dot"></div>
+
+
+                <div class="source-hint">
+                    Klik SUMBER PLN untuk membuka jaringan
                 </div>
 
             </div>
@@ -123,36 +121,45 @@
         </section>
 
 
+
         <!-- =================================================
-             LEVEL 2 : GEDUNG
+             GEDUNG
         ================================================== -->
 
         <section
             id="buildingView"
             class="view">
 
-            <div class="diagram-title">
+            <div class="diagram-heading">
 
-                <span>
-                    DISTRIBUSI UTAMA
-                </span>
+                <small>
+                    JARINGAN DISTRIBUSI
+                </small>
 
                 <h2>
-                    Jaringan Gedung
+                    SUMBER PLN
                 </h2>
 
             </div>
 
 
-            <div class="building-topology">
+            <div class="topology-wrapper">
 
-                <div class="main-vertical"></div>
+                <!-- GARIS DARI PLN KE BUS -->
+
+                <div class="main-trunk"></div>
+
+
+                <!-- BUS HORIZONTAL -->
+
+                <div class="main-bus"></div>
+
+
+                <!-- GEDUNG -->
 
                 <div
-                    id="buildingGrid"
-                    class="building-grid">
-
-                    <!-- dibuat oleh JS -->
+                    id="buildingTopology"
+                    class="building-topology">
 
                 </div>
 
@@ -161,19 +168,20 @@
         </section>
 
 
+
         <!-- =================================================
-             LEVEL 3 : PANEL
+             PANEL
         ================================================== -->
 
         <section
             id="panelView"
             class="view">
 
-            <div class="diagram-title">
+            <div class="diagram-heading">
 
-                <span>
+                <small>
                     DISTRIBUSI GEDUNG
-                </span>
+                </small>
 
                 <h2 id="buildingTitle">
                     GEDUNG
@@ -182,15 +190,15 @@
             </div>
 
 
-            <div class="panel-topology">
+            <div class="panel-topology-wrapper">
 
-                <div class="panel-main-line"></div>
+                <div class="panel-trunk"></div>
+
+                <div class="panel-bus"></div>
 
                 <div
-                    id="panelGrid"
-                    class="panel-grid">
-
-                    <!-- dibuat oleh JS -->
+                    id="panelTopology"
+                    class="panel-topology">
 
                 </div>
 
@@ -199,19 +207,20 @@
         </section>
 
 
+
         <!-- =================================================
-             LEVEL 4 : MCB
+             MCB
         ================================================== -->
 
         <section
             id="mcbView"
             class="view">
 
-            <div class="diagram-title">
+            <div class="diagram-heading">
 
-                <span>
+                <small>
                     PANEL DISTRIBUSI
-                </span>
+                </small>
 
                 <h2 id="panelTitle">
                     PANEL
@@ -220,29 +229,27 @@
             </div>
 
 
-            <div class="mcb-topology">
+            <div class="mcb-diagram">
 
-                <div class="panel-symbol">
+                <div class="panel-top">
 
-                    <div class="panel-symbol-top">
+                    <div class="panel-light">
                         ⚡
                     </div>
 
-                    <strong id="panelSymbolName">
+                    <strong id="panelName">
                         PANEL
                     </strong>
 
                 </div>
 
 
-                <div class="mcb-main-line"></div>
+                <div class="mcb-trunk"></div>
 
 
                 <div
-                    id="mcbList"
-                    class="mcb-list">
-
-                    <!-- MCB dibuat JS -->
+                    id="mcbTopology"
+                    class="mcb-topology">
 
                 </div>
 
@@ -256,11 +263,11 @@
     <footer>
 
         <span>
-            ELECTRICAL POWER SYSTEM
+            ⚡ ELECTRICAL POWER SYSTEM
         </span>
 
         <span>
-            Topologi Instalasi Listrik Arus Kuat
+            TOPOLOGI ARUS KUAT
         </span>
 
     </footer>
