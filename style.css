@@ -1,12 +1,9 @@
-/* =====================================================
-   DASAR
-===================================================== */
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 
 body {
     min-height: 100vh;
@@ -16,10 +13,9 @@ body {
         Arial,
         sans-serif;
 
-    color: #e8edf1;
+    background: #07131d;
 
-    background:
-        #09141e;
+    color: #e8edf0;
 }
 
 
@@ -27,191 +23,48 @@ body {
    HEADER
 ===================================================== */
 
-.topbar {
-    height: 82px;
+.header {
+    height: 88px;
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
 
     padding: 0 42px;
 
-    background: #0d1d2a;
+    background: #0b1c29;
 
-    border-bottom:
-        1px solid #243847;
+    border-bottom: 1px solid #203542;
 }
+
 
 .brand {
     display: flex;
     align-items: center;
+
     gap: 14px;
 }
 
-.brand-mark {
-    width: 42px;
-    height: 42px;
+
+.brand-icon {
+    width: 44px;
+    height: 44px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    background: #d9a900;
+    background: #e0ad00;
 
     color: #111;
 
-    border-radius: 7px;
+    border-radius: 6px;
 
-    font-size: 21px;
-}
-
-.brand-title {
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-}
-
-.brand-subtitle {
-    margin-top: 4px;
-
-    color: #7f96a7;
-
-    font-size: 11px;
-}
-
-.topbar-right {
-    color: #657c8c;
-
-    font-size: 10px;
-
-    letter-spacing: 2px;
+    font-size: 23px;
 }
 
 
-/* =====================================================
-   MAIN
-===================================================== */
-
-main {
-    width: min(1320px, 94%);
-
-    margin: auto;
-
-    min-height: calc(100vh - 135px);
-}
-
-
-/* =====================================================
-   NAVIGATION
-===================================================== */
-
-.navigation {
-    height: 65px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    border-bottom:
-        1px solid #1d303e;
-}
-
-.back-button {
-    padding: 8px 14px;
-
-    border:
-        1px solid #314957;
-
-    border-radius: 5px;
-
-    background: #0e202d;
-
-    color: #aebcc5;
-
-    cursor: pointer;
-
-    font-size: 11px;
-
-    transition: 0.2s;
-}
-
-.back-button:hover {
-    background: #172c3b;
-
-    color: #fff;
-
-    border-color: #627b8b;
-}
-
-.path {
-    display: flex;
-
-    align-items: center;
-
-    gap: 9px;
-
-    color: #596f7e;
-
-    font-size: 10px;
-
-    letter-spacing: 1px;
-}
-
-.path .current {
-    color: #d9a900;
-}
-
-.path-separator {
-    color: #344b5b;
-}
-
-
-/* =====================================================
-   VIEW
-===================================================== */
-
-.view {
-    display: none;
-
-    padding:
-        38px 10px
-        65px;
-}
-
-.view.active {
-    display: block;
-
-    animation:
-        showView 0.35s ease;
-}
-
-@keyframes showView {
-
-    from {
-        opacity: 0;
-        transform: translateY(8px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-}
-
-
-/* =====================================================
-   JUDUL DIAGRAM
-===================================================== */
-
-.diagram-title {
-    text-align: center;
-
-    margin-bottom: 45px;
-}
-
-.diagram-title span {
-    color: #bd960d;
+.brand-small {
+    color: #d5a700;
 
     font-size: 9px;
 
@@ -220,14 +73,167 @@ main {
     letter-spacing: 3px;
 }
 
-.diagram-title h2 {
-    margin-top: 7px;
 
-    font-size: 25px;
+.brand h1 {
+    margin-top: 3px;
+
+    font-size: 18px;
+
+    letter-spacing: 1px;
+}
+
+
+.brand p {
+    margin-top: 4px;
+
+    color: #718795;
+
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   TOOLBAR
+===================================================== */
+
+.toolbar {
+    width: min(1250px, 94%);
+
+    height: 62px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid #1b303d;
+}
+
+
+.toolbar button {
+    padding: 8px 14px;
+
+    background: #0d222f;
+
+    border: 1px solid #496170;
+
+    border-radius: 4px;
+
+    color: #c7d2d8;
+
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+
+.toolbar button:hover {
+    border-color: #d9a900;
+
+    color: #fff;
+}
+
+
+.breadcrumb {
+    display: flex;
+
+    gap: 9px;
+
+    align-items: center;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    color: #596f7d;
+}
+
+
+.breadcrumb b {
+    color: #334d5b;
+}
+
+
+.breadcrumb .active {
+    color: #d9a900;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+main {
+    width: min(1250px, 94%);
+
+    margin: auto;
+}
+
+
+.view {
+    display: none;
+
+    min-height: 540px;
+
+    padding:
+        35px 0
+        60px;
+}
+
+
+.view.active {
+    display: block;
+
+    animation:
+        appear .35s ease;
+}
+
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   JUDUL
+===================================================== */
+
+.diagram-heading {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+
+.diagram-heading small {
+    color: #c49b0b;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+}
+
+
+.diagram-heading h2 {
+    margin-top: 6px;
+
+    font-size: 23px;
 
     font-weight: 600;
-
-    color: #edf1f3;
 }
 
 
@@ -235,8 +241,8 @@ main {
    SUMBER PLN
 ===================================================== */
 
-.topology-source {
-    min-height: 490px;
+.source-page {
+    min-height: 500px;
 
     display: flex;
 
@@ -244,52 +250,48 @@ main {
 
     align-items: center;
 
-    padding-top: 55px;
+    padding-top: 60px;
 }
 
-.source-box {
-    width: 330px;
 
-    min-height: 125px;
+.source-node {
+    width: 260px;
+    height: 100px;
 
     display: flex;
+
     align-items: center;
 
-    gap: 18px;
+    gap: 17px;
 
-    padding: 20px;
+    padding: 18px;
 
-    background: #102532;
+    background: #102633;
 
-    border:
-        1px solid #526673;
+    border: 1px solid #506572;
 
-    border-left:
-        4px solid #d9a900;
+    border-left: 4px solid #d9a900;
 
-    border-radius: 4px;
+    border-radius: 3px;
 
     cursor: pointer;
 
-    transition:
-        border-color 0.2s,
-        background 0.2s,
-        transform 0.2s;
+    transition: .25s;
 }
 
-.source-box:hover {
-    background: #142d3c;
+
+.source-node:hover {
+    background: #15303f;
 
     border-color: #d9a900;
 
     transform: translateY(-3px);
 }
 
-.source-symbol {
-    width: 58px;
-    height: 58px;
 
-    flex-shrink: 0;
+.source-symbol {
+    width: 53px;
+    height: 53px;
 
     display: flex;
     align-items: center;
@@ -301,59 +303,58 @@ main {
 
     border-radius: 4px;
 
-    font-size: 28px;
+    font-size: 26px;
 }
 
-.source-label {
-    color: #8196a4;
 
-    font-size: 9px;
+.source-node small {
+    display: block;
+
+    color: #8196a2;
+
+    font-size: 8px;
 
     letter-spacing: 2px;
 }
 
-.source-content h1 {
+
+.source-node strong {
+    display: block;
+
     margin-top: 3px;
 
-    font-size: 27px;
+    font-size: 24px;
 }
 
-.source-content p {
-    margin-top: 5px;
 
-    color: #718694;
-
-    font-size: 10px;
-}
-
-.vertical-line {
+.line {
     width: 2px;
 
-    background: #526876;
+    background: #637985;
 }
 
-.source-line {
-    height: 80px;
+
+.source-to-bus {
+    height: 85px;
 }
 
-.source-node {
+
+.bus-dot {
     width: 9px;
     height: 9px;
-
-    margin-top: -1px;
 
     border-radius: 50%;
 
     background: #d9a900;
 
-    border:
-        2px solid #102532;
+    border: 2px solid #07131d;
 }
 
-.click-note {
+
+.source-hint {
     margin-top: 18px;
 
-    color: #536977;
+    color: #536a78;
 
     font-size: 10px;
 }
@@ -363,63 +364,56 @@ main {
    TOPOLOGI GEDUNG
 ===================================================== */
 
-.building-topology {
+.topology-wrapper {
     position: relative;
 
-    padding-top: 80px;
+    width: 100%;
+
+    padding-top: 70px;
 }
 
-.main-vertical {
+
+.main-trunk {
     position: absolute;
 
-    left: 50%;
     top: 0;
+    left: 50%;
 
     width: 2px;
-    height: 80px;
+    height: 70px;
 
     transform: translateX(-50%);
 
-    background: #536b79;
+    background: #637985;
 }
 
 
-/*
-   Garis horizontal utama
-*/
+.main-bus {
+    position: absolute;
 
-.building-grid {
-    position: relative;
+    top: 70px;
 
+    left: 7%;
+
+    width: 86%;
+
+    height: 2px;
+
+    background: #637985;
+}
+
+
+.building-topology {
     display: grid;
 
     grid-template-columns:
         repeat(6, 1fr);
 
-    gap: 0;
-}
-
-.building-grid::before {
-    content: "";
-
-    position: absolute;
-
-    left: 8.33%;
-    right: 8.33%;
-
-    top: -1px;
-
-    height: 2px;
-
-    background: #536b79;
+    position: relative;
 }
 
 
-/* =====================================================
-   GEDUNG
-===================================================== */
-
-.building-node {
+.building-branch {
     position: relative;
 
     display: flex;
@@ -428,118 +422,157 @@ main {
 
     align-items: center;
 
-    padding-top: 28px;
-
-    cursor: pointer;
+    padding-top: 2px;
 
     opacity: 0;
 
     transform: translateY(15px);
 
-    transition:
-        opacity 0.35s,
-        transform 0.35s;
+    transition: .4s;
 }
 
-.building-node.visible {
+
+.building-branch.show {
     opacity: 1;
 
     transform: translateY(0);
 }
 
-.building-node::before {
+
+/* garis turun dari bus */
+
+.building-branch::before {
+    content: "";
+
+    width: 2px;
+    height: 45px;
+
+    background: #637985;
+}
+
+
+/* titik pada bus */
+
+.building-branch::after {
     content: "";
 
     position: absolute;
 
-    top: -1px;
+    top: -4px;
 
-    width: 2px;
-    height: 29px;
+    width: 9px;
+    height: 9px;
 
-    background: #536b79;
+    border-radius: 50%;
+
+    background: #d9a900;
+
+    border: 2px solid #07131d;
 }
+
 
 .building-box {
     width: 145px;
-    min-height: 110px;
+    min-height: 105px;
+
+    margin-top: 0;
 
     display: flex;
 
     flex-direction: column;
 
     align-items: center;
+
     justify-content: center;
 
-    gap: 7px;
+    gap: 6px;
 
-    background: #102532;
+    background: #102633;
 
-    border:
-        1px solid #435b69;
+    border: 1px solid #4d6572;
 
     border-radius: 3px;
 
-    transition:
-        0.2s;
+    cursor: pointer;
+
+    transition: .25s;
 }
 
-.building-node:hover .building-box {
+
+.building-box:hover {
     border-color: #d9a900;
 
-    background: #142d3b;
+    background: #15303e;
 
     transform: translateY(-4px);
 }
 
+
 .building-icon {
     font-size: 25px;
-
-    color: #b3c0c8;
 }
 
+
 .building-name {
-    font-size: 13px;
+    font-size: 12px;
 
     font-weight: 600;
+
+    letter-spacing: .8px;
+}
+
+
+.building-panel-count {
+    color: #758c98;
+
+    font-size: 8px;
 
     letter-spacing: 1px;
 }
 
-.building-code {
-    color: #667f8e;
-
-    font-size: 9px;
-}
-
 
 /* =====================================================
-   TOPOLOGI PANEL
+   PANEL TOPOLOGY
 ===================================================== */
 
-.panel-topology {
+.panel-topology-wrapper {
     position: relative;
 
     padding-top: 75px;
 }
 
-.panel-main-line {
+
+.panel-trunk {
     position: absolute;
 
-    left: 50%;
     top: 0;
+    left: 50%;
 
     width: 2px;
     height: 75px;
 
     transform: translateX(-50%);
 
-    background: #536b79;
+    background: #637985;
 }
 
-.panel-grid {
-    position: relative;
 
+.panel-bus {
+    position: absolute;
+
+    top: 75px;
+
+    left: 15%;
+
+    width: 70%;
+
+    height: 2px;
+
+    background: #637985;
+}
+
+
+.panel-topology {
     display: flex;
 
     justify-content: center;
@@ -547,30 +580,13 @@ main {
     gap: 80px;
 }
 
-.panel-grid::before {
-    content: "";
 
-    position: absolute;
-
-    top: 0;
-
-    left: 15%;
-
-    right: 15%;
-
-    height: 2px;
-
-    background: #536b79;
-}
-
-.panel-node {
+.panel-branch {
     position: relative;
 
+    padding-top: 2px;
+
     width: 190px;
-
-    padding-top: 30px;
-
-    cursor: pointer;
 
     text-align: center;
 
@@ -578,33 +594,31 @@ main {
 
     transform: translateY(15px);
 
-    transition:
-        0.3s;
+    transition: .4s;
 }
 
-.panel-node.visible {
+
+.panel-branch.show {
     opacity: 1;
 
     transform: translateY(0);
 }
 
-.panel-node::before {
+
+.panel-branch::before {
     content: "";
 
-    position: absolute;
-
-    top: 0;
-
-    left: 50%;
+    display: block;
 
     width: 2px;
 
-    height: 30px;
+    height: 45px;
 
-    transform: translateX(-50%);
+    margin: auto;
 
-    background: #536b79;
+    background: #637985;
 }
+
 
 .panel-box {
     min-height: 125px;
@@ -617,62 +631,129 @@ main {
 
     justify-content: center;
 
-    background: #122a38;
+    background: #102633;
 
-    border:
-        1px solid #4a626f;
+    border: 1px solid #4d6572;
 
     border-radius: 3px;
 
-    transition:
-        0.2s;
+    cursor: pointer;
+
+    transition: .25s;
 }
 
-.panel-node:hover .panel-box {
+
+.panel-box:hover {
     border-color: #d9a900;
 
-    background: #162f3e;
+    background: #15303e;
 
     transform: translateY(-4px);
 }
 
+
 .panel-icon {
-    width: 43px;
-    height: 43px;
+    width: 40px;
+    height: 40px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
-    margin-bottom: 10px;
-
-    background: #263f4c;
-
-    border-radius: 3px;
+    background: #263d49;
 
     color: #d9a900;
 
-    font-size: 19px;
+    border-radius: 3px;
+
+    margin-bottom: 9px;
 }
 
+
 .panel-name {
-    font-size: 13px;
+    font-size: 12px;
 
     font-weight: 600;
 }
 
-.panel-info {
+
+.panel-count {
     margin-top: 6px;
 
-    color: #718896;
+    color: #718794;
 
     font-size: 9px;
 }
 
 
 /* =====================================================
-   TOPOLOGI MCB
+   MCB TOPOLOGY
 ===================================================== */
+
+.mcb-diagram {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+.panel-top {
+    width: 190px;
+    height: 100px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    background: #102633;
+
+    border: 1px solid #4d6572;
+
+    border-top: 3px solid #d9a900;
+
+    border-radius: 3px;
+}
+
+
+.panel-light {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #273f4b;
+
+    color: #d9a900;
+
+    border-radius: 3px;
+}
+
+
+.panel-top strong {
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+.mcb-trunk {
+    width: 2px;
+    height: 45px;
+
+    background: #637985;
+}
+
 
 .mcb-topology {
     display: flex;
@@ -682,95 +763,26 @@ main {
     align-items: center;
 }
 
-.panel-symbol {
-    width: 190px;
-    min-height: 110px;
 
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 9px;
-
-    background: #122a38;
-
-    border:
-        1px solid #4a626f;
-
-    border-top:
-        3px solid #d9a900;
-
-    border-radius: 3px;
-}
-
-.panel-symbol-top {
-    width: 38px;
-    height: 38px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: #253e4b;
-
-    color: #d9a900;
-
-    border-radius: 3px;
-}
-
-.panel-symbol strong {
-    font-size: 12px;
-
-    letter-spacing: 1px;
-}
-
-.mcb-main-line {
-    width: 2px;
-    height: 45px;
-
-    background: #536b79;
-}
-
-
-/* =====================================================
-   LIST MCB
-===================================================== */
-
-.mcb-list {
+.mcb-node {
     position: relative;
 
-    display: flex;
+    width: 480px;
 
-    flex-direction: column;
-
-    align-items: center;
-
-    gap: 0;
-}
-
-.mcb-item {
-    position: relative;
-
-    width: 430px;
-
-    min-height: 75px;
+    min-height: 68px;
 
     display: grid;
 
     grid-template-columns:
-        70px 1fr 100px 100px;
+        75px 1fr 90px 100px;
 
     align-items: center;
 
-    padding: 12px 18px;
+    padding: 12px 16px;
 
-    background: #102532;
+    background: #102633;
 
-    border:
-        1px solid #334d5c;
+    border: 1px solid #3f5967;
 
     border-radius: 3px;
 
@@ -778,45 +790,49 @@ main {
 
     transform: translateY(12px);
 
-    transition:
-        0.25s;
+    transition: .4s;
 }
 
-.mcb-item.visible {
+
+.mcb-node.show {
     opacity: 1;
 
     transform: translateY(0);
 }
 
-.mcb-item:not(:last-child)::after {
+
+.mcb-node:not(:last-child)::after {
     content: "";
 
     position: absolute;
 
     left: 50%;
 
-    bottom: -26px;
+    bottom: -30px;
 
     width: 2px;
 
-    height: 26px;
+    height: 30px;
+
+    background: #637985;
 
     transform: translateX(-50%);
-
-    background: #536b79;
 }
 
-.mcb-no {
-    color: #6f8795;
 
-    font-size: 10px;
+.mcb-number {
+    color: #6f8793;
+
+    font-size: 9px;
 }
+
 
 .mcb-name {
-    font-size: 12px;
+    font-size: 11px;
 
     font-weight: 600;
 }
+
 
 .mcb-ampere {
     color: #d9a900;
@@ -826,11 +842,13 @@ main {
     font-weight: 600;
 }
 
-.mcb-phase {
-    color: #8da1ac;
 
-    font-size: 10px;
+.mcb-phase {
+    color: #879ba6;
+
+    font-size: 9px;
 }
+
 
 .mcb-phase.three {
     color: #d9a900;
@@ -842,19 +860,19 @@ main {
 ===================================================== */
 
 footer {
-    height: 53px;
+    height: 50px;
+
+    border-top: 1px solid #1b303d;
 
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     padding: 0 42px;
 
-    border-top:
-        1px solid #1d303e;
-
-    color: #506675;
+    color: #4e6674;
 
     font-size: 9px;
 
@@ -868,25 +886,23 @@ footer {
 
 @media (max-width: 1000px) {
 
-    .building-grid {
+    .building-topology {
         grid-template-columns:
             repeat(3, 1fr);
 
-        row-gap: 45px;
+        row-gap: 35px;
     }
 
-    .building-grid::before {
+    .main-bus {
         display: none;
     }
 
-    .building-node::before {
+    .building-branch::after {
         display: none;
     }
 
-    .panel-grid {
+    .panel-topology {
         flex-wrap: wrap;
-
-        gap: 35px;
     }
 
 }
@@ -894,67 +910,54 @@ footer {
 
 @media (max-width: 650px) {
 
-    .topbar {
+    .header {
+        padding: 16px 20px;
+    }
+
+    .brand h1 {
+        font-size: 15px;
+    }
+
+    .toolbar {
         height: auto;
 
-        padding: 18px;
-    }
+        padding: 12px 0;
 
-    .topbar-right {
-        display: none;
-    }
-
-    main {
-        width: 94%;
-    }
-
-    .navigation {
-        height: auto;
-
-        padding: 15px 0;
+        gap: 12px;
 
         flex-direction: column;
 
         align-items: flex-start;
-
-        gap: 12px;
     }
 
-    .building-grid {
+    .building-topology {
         grid-template-columns:
             repeat(2, 1fr);
 
-        gap: 25px 12px;
+        gap: 25px 10px;
     }
 
     .building-box {
         width: 100%;
-
-        min-height: 95px;
     }
 
-    .panel-grid {
+    .panel-topology {
         flex-direction: column;
 
         align-items: center;
 
-        gap: 25px;
+        gap: 20px;
     }
 
-    .panel-node {
-        width: 100%;
-        max-width: 250px;
-    }
-
-    .panel-grid::before {
+    .panel-bus {
         display: none;
     }
 
-    .mcb-item {
+    .mcb-node {
         width: 100%;
 
         grid-template-columns:
-            45px 1fr;
+            55px 1fr;
 
         gap: 5px;
     }
@@ -965,15 +968,15 @@ footer {
     }
 
     footer {
-        padding: 15px;
+        padding: 15px 20px;
 
         height: auto;
-
-        gap: 8px;
 
         flex-direction: column;
 
         align-items: flex-start;
+
+        gap: 8px;
     }
 
 }
